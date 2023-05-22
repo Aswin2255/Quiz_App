@@ -41,7 +41,7 @@ function QuestionCard({ quesition, answer,  correctanswer }: Prop): React.ReactE
         </div>
         {answer.map((e) => {
           return (
-            <div className={corect[e] ? "flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 bg-green-600" : wrong[e] ?  "flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 bg-red-600 " : "flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 "}>
+            <div className={corect[e] ? " cursor-pointer flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 bg-green-600" : wrong[e] ?  " cursor-pointer flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 bg-red-600 " : " cursor-pointer flex items-center pl-4 border border-gray-200 rounded dark:border-gray-700 "}>
               <input
                 type="radio"
                 value={e}
