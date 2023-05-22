@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { QuestionState, fetchQuiz } from "./api/Api";
+import { QuestionState} from "./api/Api";
 import QuestionCard from "./componets/QuestionCard";
 import "./index.css";
 import Navbar from "./componets/Navbar";
@@ -13,16 +13,10 @@ export type Answerobject = {
 };
 
 function App(): React.ReactElement {
-  const startquiz = async () => {
-    setloading(true);
-    //const newquestions = await fetchQuiz(10, Difficulty.EASY);
-    //setquestions(newquestions);
-    setloading(false);
-  };
+ 
   const [loading, setloading] = useState<boolean>(false);
   const [questions, setquestions] = useState<QuestionState[]>([]);
-  const [useranswer, setuseranswer] = useState<Answerobject[]>([]);
-  const [gameover, setgameover] = useState(false);
+ 
   const [dark, setdark] = useState<boolean>(false);
 
   useEffect(() => {

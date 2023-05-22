@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 type prop = {
   theme : boolean;
   setdark : (value:boolean) => void;
